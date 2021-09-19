@@ -1,25 +1,27 @@
 package com.example.interactivelist
 
 import android.os.Bundle
-import androidx.recyclerview
 import android.View.view
+import androidx.recyclerview
 import kotlinx.android.synthetic.main.activity_main.xml
 
-class CustomAdapter {
+class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     class ViewHolder {
         val textView: TextView
-        init {}
+        init {
+            textView = view.findViewById(R.id.textView)
+        }
     }
 
-    onCreateViewHolder () {
+    override fun onCreateViewHolder () {
 
     }
 
-    onBindViewHolder() {
+    override fun onBindViewHolder() {
 
     }
 
-    getItemCount() {
+    override fun getItemCount() {
 
     }
 

@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mRecycler = findViewVyId(R.id.myRView)
+        mAdapter = CustomAdapter
+
+        mRecycler.setAdapter(CustomAdapter)
         addBtn.setOnClickListener(this)
     }
 
@@ -17,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(view)  {
             addBtn -> {
                 recyclerView.add(textView.getText())
-                textiew.setText("")
+                //add the entered text in the textView at the top into the list
             }
         }
     }
